@@ -1,0 +1,94 @@
+/* Global Styles */
+body {
+  background: linear-gradient(to right, #f3f4f6, #e5e7eb);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Page Title */
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+/* Tabs */
+.nav-tabs .nav-link {
+  color: #555;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-tabs .nav-link.active {
+  color: #fff;
+  background-color: #3498db;
+  border-color: #3498db;
+  border-radius: 8px 8px 0 0;
+}
+
+.nav-tabs .nav-link:hover {
+  color: #2980b9;
+}
+
+/* Tab Content Styling */
+.tab-content {
+  background: #ffffff;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-success {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #1e70bf;
+}
+
+.btn-success:hover {
+  background-color: #2ecc71;
+}
+
+/* File input and form fields */
+input[type="file"],
+input[type="number"],
+select {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.4);
+}
+
+/* Output Image */
+#outputImage {
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+  margin-top: 15px;
+}
+
+/* Result text */
+#cocoonDetails,
+#priceOutput {
+  font-size: 1.1rem;
+  margin-top: 15px;
+  color: #2c3e50;
+  background-color: #ecf0f1;
+  padding: 15px;
+  border-radius: 8px;
+  font-weight: 500;
+}
