@@ -1,94 +1,427 @@
-/* Global Styles */
-body {
-  background: linear-gradient(to right, #f3f4f6, #e5e7eb);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-/* Page Title */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px;
+  color: #333;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+}
+
 h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
+  text-align: center;
   color: #2c3e50;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 30px 0;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+/* Enhanced Tabs */
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+  background: #f8f9fa;
+  border-radius: 15px 15px 0 0;
+  padding: 10px;
+  gap: 5px;
+}
+
+.tab-button {
+  padding: 15px 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  color: #666;
+  position: relative;
+}
+
+.tab-button:hover {
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+  transform: translateY(-2px);
+}
+
+.tab-button.active {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+  transform: translateY(-2px);
+}
+
+.tab-content {
+  display: none;
+  padding: 40px;
+  background: white;
+  border-radius: 0 0 20px 20px;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Classification Tab Styles */
+#classify {
+  text-align: center;
+}
+
+input[type="file"] {
+  width: 100%;
+  padding: 20px;
+  margin: 20px 0;
+  border: 3px dashed #667eea;
+  border-radius: 15px;
+  background: #f8f9ff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+input[type="file"]:hover {
+  border-color: #764ba2;
+  background: #f0f4ff;
+  transform: translateY(-2px);
+}
+
+#classifyBtn {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  padding: 18px 40px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  margin: 20px 0;
+}
+
+#classifyBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(102, 126, 234, 0.4);
+}
+
+#classifyBtn:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Price Valuation Tab Styles */
+.form-container {
+  background: linear-gradient(135deg, #f8f9ff, #f0f4ff);
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 30px;
+  border: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
   margin-bottom: 30px;
 }
 
-/* Tabs */
-.nav-tabs .nav-link {
-  color: #555;
-  font-weight: 500;
-  transition: 0.3s;
+.input-group {
+  position: relative;
 }
 
-.nav-tabs .nav-link.active {
-  color: #fff;
-  background-color: #3498db;
-  border-color: #3498db;
-  border-radius: 8px 8px 0 0;
-}
-
-.nav-tabs .nav-link:hover {
-  color: #2980b9;
-}
-
-/* Tab Content Styling */
-.tab-content {
-  background: #ffffff;
-  border-radius: 0 0 10px 10px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
-  padding: 30px;
-}
-
-/* Buttons */
-.btn-primary,
-.btn-success {
-  padding: 10px 20px;
-  border-radius: 8px;
+.input-group label {
+  display: block;
   font-weight: 600;
-  transition: 0.2s ease-in-out;
-}
-
-.btn-primary:hover {
-  background-color: #1e70bf;
-}
-
-.btn-success:hover {
-  background-color: #2ecc71;
-}
-
-/* File input and form fields */
-input[type="file"],
-input[type="number"],
-select {
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  padding: 10px;
-}
-
-input:focus,
-select:focus {
-  outline: none;
-  border-color: #3498db;
-  box-shadow: 0 0 5px rgba(52, 152, 219, 0.4);
-}
-
-/* Output Image */
-#outputImage {
-  border-radius: 10px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
-  margin-top: 15px;
-}
-
-/* Result text */
-#cocoonDetails,
-#priceOutput {
+  margin-bottom: 8px;
   font-size: 1.1rem;
-  margin-top: 15px;
   color: #2c3e50;
-  background-color: #ecf0f1;
-  padding: 15px;
-  border-radius: 8px;
+}
+
+.input-group label span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 15px 20px;
+  border: 2px solid #e3e8f0;
+  border-radius: 12px;
+  background: white;
+  font-size: 1rem;
+  color: #333;
+  transition: all 0.3s ease;
   font-weight: 500;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 20px rgba(102, 126, 234, 0.2);
+  transform: translateY(-2px);
+}
+
+.input-group select {
+  cursor: pointer;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 18px 30px;
+  background: linear-gradient(135deg, #28a745, #20c997);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
+}
+
+.submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(40, 167, 69, 0.4);
+  background: linear-gradient(135deg, #20c997, #28a745);
+}
+
+/* Results and Output */
+.result {
+  margin-top: 30px;
+  text-align: center;
+}
+
+#outputImage {
+  max-width: 100%;
+  height: auto;
+  display: none;
+  margin: 20px auto;
+  border: 3px solid #667eea;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+#cocoonDetails {
+  margin-top: 25px;
+  text-align: left;
+  background: linear-gradient(135deg, #f8f9ff, #f0f4ff);
+  padding: 25px;
+  border: 2px solid #e3e8f0;
+  border-radius: 15px;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.loading {
+  display: none;
+  text-align: center;
+  margin: 30px 0;
+  color: #667eea;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.loading::after {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #667eea;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  margin-left: 10px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error {
+  color: #dc3545;
+  background: linear-gradient(135deg, #f8d7da, #f5c6cb);
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin: 15px 0;
+  display: none;
+  border-left: 5px solid #dc3545;
+  font-weight: 500;
+}
+
+.results-container {
+  background: linear-gradient(135deg, #d4edda, #c3e6cb);
+  border-radius: 15px;
+  padding: 30px;
+  color: #155724;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #28a745;
+  margin-top: 25px;
+}
+
+.calculation-section {
+  background: #f8f9ff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border-left: 5px solid #667eea;
+}
+
+.highlight {
+  background: linear-gradient(135deg, #d4edda, #c3e6cb);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border-left: 5px solid #28a745;
+  color: #155724;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.warning {
+  background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border-left: 5px solid #ffc107;
+  color: #856404;
+  font-weight: 500;
+}
+
+/* About Tab Styles */
+#about {
+  padding: 40px;
+}
+
+#about p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+#about ul {
+  background: #f8f9ff;
+  padding: 25px;
+  border-radius: 10px;
+  border-left: 5px solid #667eea;
+}
+
+#about li {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  color: #444;
+  padding-left: 10px;
+  position: relative;
+}
+
+#about li::before {
+  content: '✓';
+  color: #28a745;
+  font-weight: bold;
+  position: absolute;
+  left: -15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+  
+  .container {
+    margin: 0;
+    border-radius: 15px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin: 20px 0;
+  }
+  
+  .tabs {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .tab-button {
+    margin: 0;
+    padding: 12px 20px;
+  }
+  
+  .tab-content {
+    padding: 25px;
+  }
+  
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .input-group input,
+  .input-group select {
+    padding: 12px 15px;
+  }
+  
+  .submit-btn,
+  #classifyBtn {
+    padding: 15px 25px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  .tab-content {
+    padding: 20px;
+  }
+  
+  .form-container {
+    padding: 20px;
+  }
 }
