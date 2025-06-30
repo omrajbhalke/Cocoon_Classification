@@ -108,6 +108,7 @@ function displayResults(stats) {
   const details = document.getElementById("cocoonDetails");
 
   details.innerHTML = `
+    <pre style="font-family: monospace; background: #f9f9f9; padding: 10px; border: 1px solid #ccc; border-radius: 8px;">
 ======== Final Cocoon Quality Report ========
 Total Detections       : ${stats["Total Detections"]}
 Qualified Cocoon Count : ${stats["Qualified Cocoon Count"]}
@@ -115,8 +116,10 @@ Defect Count           : ${stats["Defect Count"]}
 Qualified Cocoon %     : ${stats["Qualified Cocoon %"]}%
 Defect %               : ${stats["Defect %"]}%
 ================================================
-      `.trim();
+    </pre>
+  `.trim();
 }
+
 
 // Helper function to show errors
 function showError(message) {

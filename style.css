@@ -144,7 +144,7 @@ input[type="file"]:hover {
   box-shadow: none;
 }
 
-/* Price Valuation Tab Styles */
+/* Silk Calculator Tab Styles - Updated for simplified form */
 .form-container {
   background: linear-gradient(135deg, #f8f9ff, #f0f4ff);
   border-radius: 15px;
@@ -153,21 +153,25 @@ input[type="file"]:hover {
   border: 1px solid rgba(102, 126, 234, 0.1);
 }
 
+/* Updated form grid for 2-column layout */
 .form-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 25px;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
   margin-bottom: 30px;
+  align-items: end;
 }
 
 .input-group {
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .input-group label {
   display: block;
   font-weight: 600;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
   font-size: 1.1rem;
   color: #2c3e50;
 }
@@ -175,13 +179,13 @@ input[type="file"]:hover {
 .input-group label span {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+  font-size: 1.1rem;
 }
 
-.input-group input,
-.input-group select {
+.input-group input {
   width: 100%;
-  padding: 15px 20px;
+  padding: 18px 20px;
   border: 2px solid #e3e8f0;
   border-radius: 12px;
   background: white;
@@ -189,24 +193,85 @@ input[type="file"]:hover {
   color: #333;
   transition: all 0.3s ease;
   font-weight: 500;
+  font-family: 'Poppins', sans-serif;
 }
 
-.input-group input:focus,
-.input-group select:focus {
+.input-group input:focus {
   outline: none;
   border-color: #667eea;
   box-shadow: 0 0 20px rgba(102, 126, 234, 0.2);
   transform: translateY(-2px);
 }
 
-.input-group select {
-  cursor: pointer;
+.input-group input::placeholder {
+  color: #bbb;
+  font-weight: 400;
 }
 
+/* Small descriptive text under inputs */
+.input-group small {
+  margin-top: 8px;
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* Information section styling */
+.info-section {
+  background: linear-gradient(135deg, #e8f4fd, #d6eaff);
+  border-radius: 12px;
+  padding: 25px;
+  margin: 25px 0;
+  border-left: 5px solid #667eea;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.1);
+}
+
+.info-section h4 {
+  color: #2c3e50;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 15px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.info-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.info-section li {
+  color: #34495e;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.info-section li::before {
+  content: '✓';
+  color: #667eea;
+  font-weight: bold;
+  font-size: 1.1rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.info-section li strong {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+/* Updated submit button */
 .submit-btn {
   width: 100%;
   padding: 18px 30px;
-  background: linear-gradient(135deg, #28a745, #20c997);
+  background: linear-gradient(135deg, #667eea, #764ba2);
   color: white;
   border: none;
   border-radius: 12px;
@@ -216,13 +281,14 @@ input[type="file"]:hover {
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 1px;
-  box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  font-family: 'Poppins', sans-serif;
 }
 
 .submit-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(40, 167, 69, 0.4);
-  background: linear-gradient(135deg, #20c997, #28a745);
+  box-shadow: 0 12px 30px rgba(102, 126, 234, 0.4);
+  background: linear-gradient(135deg, #764ba2, #667eea);
 }
 
 /* Results and Output */
@@ -291,43 +357,70 @@ input[type="file"]:hover {
   font-weight: 500;
 }
 
+/* Enhanced results container */
 .results-container {
-  background: linear-gradient(135deg, #d4edda, #c3e6cb);
+  background: linear-gradient(135deg, #f8f9ff, #f0f4ff);
   border-radius: 15px;
   padding: 30px;
-  color: #155724;
+  color: #2c3e50;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  border-left: 5px solid #28a745;
+  border: 1px solid rgba(102, 126, 234, 0.2);
   margin-top: 25px;
 }
 
 .calculation-section {
-  background: #f8f9ff;
-  padding: 20px;
-  border-radius: 10px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
   margin-bottom: 20px;
   border-left: 5px solid #667eea;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  line-height: 1.6;
 }
 
-.highlight {
-  background: linear-gradient(135deg, #d4edda, #c3e6cb);
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  border-left: 5px solid #28a745;
-  color: #155724;
+.calculation-section strong {
+  color: #2c3e50;
   font-weight: 600;
   font-size: 1.1rem;
 }
 
+.highlight {
+  background: linear-gradient(135deg, #d5f4e6, #c8e6c9) !important;
+  border-left: 5px solid #27ae60 !important;
+  color: #155724 !important;
+  font-weight: 600;
+  font-size: 1.1rem;
+  box-shadow: 0 3px 15px rgba(39, 174, 96, 0.2);
+}
+
 .warning {
-  background: linear-gradient(135deg, #fff3cd, #ffeaa7);
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  border-left: 5px solid #ffc107;
-  color: #856404;
+  background: linear-gradient(135deg, #fff3cd, #ffeaa7) !important;
+  border-left: 5px solid #f39c12 !important;
+  color: #856404 !important;
   font-weight: 500;
+  box-shadow: 0 3px 15px rgba(243, 156, 18, 0.2);
+}
+
+/* Table styling for results */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+table td {
+  padding: 12px 15px;
+  border: 1px solid #e3e8f0;
+  font-size: 1rem;
+}
+
+table tr:nth-child(even) {
+  background-color: #f8f9ff;
+}
+
+table tr:hover {
+  background-color: #f0f4ff;
 }
 
 /* About Tab Styles */
@@ -395,20 +488,30 @@ input[type="file"]:hover {
     padding: 25px;
   }
   
+  /* Make form single column on mobile */
   .form-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
   
-  .input-group input,
-  .input-group select {
-    padding: 12px 15px;
+  .input-group input {
+    padding: 15px 18px;
+    font-size: 16px; /* Prevents zoom on iOS */
   }
   
   .submit-btn,
   #classifyBtn {
     padding: 15px 25px;
     font-size: 1rem;
+  }
+  
+  .form-container {
+    padding: 25px;
+  }
+  
+  .info-section {
+    padding: 20px;
+    margin: 20px 0;
   }
 }
 
@@ -423,5 +526,17 @@ input[type="file"]:hover {
   
   .form-container {
     padding: 20px;
+  }
+  
+  .info-section {
+    padding: 18px;
+  }
+  
+  .calculation-section {
+    padding: 20px;
+  }
+  
+  .results-container {
+    padding: 25px;
   }
 }

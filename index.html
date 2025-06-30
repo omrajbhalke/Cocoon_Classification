@@ -39,24 +39,18 @@
 
     <!-- Price Valuation Tab -->
     <!-- Price Valuation Tab -->
-    <div id="price" class="tab-content">
-        <h2>🏷️ Cocoon Price Estimator</h2>
+<div id="price" class="tab-content">
+        <h2>🏷️ Silk Production Calculator</h2>
         
         <div class="form-container">
             <form id="valuationForm">
                 <div class="form-grid">
                     <div class="input-group">
-                        <label for="weightInput">
-                            <span>⚖️ Desired Silk Weight (kg)</span>
+                        <label for="cocoonWeightInput">
+                            <span>⚖️ Cocoon Weight (kg)</span>
                         </label>
-                        <input type="number" id="weightInput" step="0.1" min="0" required placeholder="Enter weight in kg">
-                    </div>
-
-                    <div class="input-group">
-                        <label for="totalCocoonsInput">
-                            <span>🐛 Total Cocoon Count</span>
-                        </label>
-                        <input type="number" id="totalCocoonsInput" step="1" min="0" required placeholder="Number of cocoons detected">
+                        <input type="number" id="cocoonWeightInput" step="0.1" min="0" required placeholder="Enter cocoon weight in kg">
+                        <small>Total weight of cocoons you have</small>
                     </div>
                     
                     <div class="input-group">
@@ -64,41 +58,27 @@
                             <span>✅ Qualified Percentage (%)</span>
                         </label>
                         <input type="number" id="qualifiedInput" step="0.1" min="0" max="100" required placeholder="% of qualified cocoons">
-                    </div>
-
-                    <div class="input-group">
-                        <label for="gradeInput">
-                            <span>⭐ Quality Grade</span>
-                        </label>
-                        <select id="gradeInput">
-                            <option value="A">🥇 Grade A (Premium Quality)</option>
-                            <option value="B">🥈 Grade B (Standard Quality)</option>
-                            <option value="C">🥉 Grade C (Economy Quality)</option>
-                        </select>
-                    </div>
-
-                    <div class="input-group">
-                        <label for="seasonInput">
-                            <span>🌱 Season</span>
-                        </label>
-                        <select id="seasonInput" required>
-                            <option value="">Select Season</option>
-                            <option value="summer">☀️ Summer (Apr-Jun)</option>
-                            <option value="monsoon">🌧️ Monsoon (Jul-Sep)</option>
-                            <option value="winter">❄️ Winter (Oct-Dec)</option>
-                            <option value="spring">🌸 Spring (Jan-Mar)</option>
-                        </select>
+                        <small>Percentage of good quality cocoons (non-defective)</small>
                     </div>
                 </div>
 
+                <div class="info-section" style="background-color: #e8f4fd; padding: 15px; border-radius: 8px; margin: 20px 0;">
+                    <h4>📊 Automatic Calculations:</h4>
+                    <ul style="margin: 10px 0; padding-left: 20px;">
+                        <li><strong>Grade Assignment:</strong> 90%+ = Grade A, 75%+ = Grade B, Below 75% = Grade C</li>
+                        <li><strong>Renditta (Silk Yield):</strong> Based on real industry data from defect percentage</li>
+                    </ul>
+                </div>
+
                 <button type="submit" class="submit-btn">
-                    💰 Calculate Price Estimate
+                    🚀 Calculate Silk Production
                 </button>
             </form>
         </div>
 
         <div id="priceOutput" class="results-container" style="display: none;"></div>
     </div>
+
 
     <!-- About Tab -->
     <div id="about" class="tab-content">
