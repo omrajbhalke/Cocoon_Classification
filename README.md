@@ -20,4 +20,9 @@ This project combines **Python (Flask)** for the backend with a **JavaScript + H
    git clone https://github.com/omrajbhalke/Cocoon_Classification.git
    cd Cocoon_Classification
 
-
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+2. Run backend:
+   ```bash
+   python app.py
