@@ -23,6 +23,6 @@ This project combines **Python (Flask)** for the backend with a **JavaScript + H
 2. Install dependencies:
    ```bash
    pip install -r requirements.txt
-2. Run backend:
+3. Run backend:
    ```bash
    python app.py
