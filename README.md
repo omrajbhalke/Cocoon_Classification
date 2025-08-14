@@ -1,10 +1,3 @@
-Alright — now that I’ve gone through both your **GitHub repo contents** and the **research paper**, I can create a detailed, professional README that reflects both the **technical depth** and the **practical application** of your project.
-
-Here’s a **complete README.md** for your `Cocoon_Classification` repo:
-
----
-
-```markdown
 # 🐛 Automated Cocoon Quality Assessment and Silk Yield Estimation
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue.svg)
@@ -68,18 +61,16 @@ The system is suitable for **industrial-scale silk factories** and **small farms
 ## 🏗️ Project Structure
 
 ```
-
-Cocoon\_Classification/
+Cocoon_Classification/
 ├── app.py                 # Flask backend for model inference and API
 ├── app.js                 # Frontend logic (AJAX requests to backend)
 ├── index.html             # Web interface for uploading and viewing results
 ├── style.css              # Frontend styling
-├── best\_classifier.pth    # Trained EfficientNet-B0 classification model
-├── best\_s\_300.pt          # Trained YOLOv8 segmentation model
+├── best_classifier.pth    # Trained EfficientNet-B0 classification model
+├── best_s_300.pt          # Trained YOLOv8 segmentation model
 ├── uploads/               # Directory for uploaded cocoon images
 └── requirements.txt       # Python dependencies
-
-````
+```
 
 ---
 
@@ -104,7 +95,7 @@ Cocoon\_Classification/
 ```bash
 git clone https://github.com/omrajbhalke/Cocoon_Classification.git
 cd Cocoon_Classification
-````
+```
 
 ### 2️⃣ Install Python dependencies
 
@@ -135,7 +126,6 @@ Open `index.html` in your browser or serve it via a local server.
 
 * Total images: **3,068 cocoons**
 * Categories:
-
   * **Good** – 773 samples
   * **Double** – 468 samples
   * **Crushed** – 681 samples
@@ -185,6 +175,7 @@ This project is licensed under the **MIT License** – see the [LICENSE](LICENSE
 ## 👥 Contributors
 
 * **Omraj Ravindra Bhalke**, **Aryan Vats**, **Krrish Agrawal**, **Aditya Singh**
+
 ---
 
 ## 📬 Contact
@@ -195,9 +186,3 @@ For queries or collaboration:
 * **GitHub:** [@omrajbhalke](https://github.com/omrajbhalke)
 
 ---
-
-```
-
----
-
-```
